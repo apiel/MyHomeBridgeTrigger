@@ -9,11 +9,12 @@ restify.CORS.ALLOW_HEADERS.push('authorization');
 
 var server = restify.createServer();
 server.use(restify.CORS());
+server.use(restify.bodyParser());
 
 let triggerModel = new TriggerModel();
 let triggerService = new TriggerService(triggerModel);
 let triggerController = new TriggerController(triggerService);
-server.get('/trigger/push', triggerController.push.bind(triggerController));
+server.post('/trigger/push', triggerController.push.bind(triggerController));
 
 server.listen(3040, function() {
   console.log('%s listening at %s', server.name, server.url);

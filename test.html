@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form method="POST" action="http://192.168.0.67:3040/trigger/push">
+            <textarea name="status">
+[{
+	"id": "chill",
+	"status": "off"
+}, {
+	"id": "table",
+	"status": "off"
+}, {
+	"id": "none",
+	"status": "off"
+}, {
+	"id": "wc",
+	"status": "off"
+}, {
+	"id": "wall",
+	"status": "off"
+}, {
+	"id": "kitchen",
+	"status": "off"
+}, {
+	"id": "sunlight",
+	"status": "nighttime"
+}, {
+	"id": "temperature",
+	"status": 22
+}, {
+	"id": "thermostat",
+	"status": 56
+}, {
+	"id": "heating",
+	"status": "off"
+}, {
+	"id": "store",
+	"status": "closed"
+}]                
+            </textarea>
+            <button type="submit">Test</button>
+        </form>
+    </body>
+</html>
